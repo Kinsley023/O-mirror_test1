@@ -24,8 +24,8 @@
                 <!-- Inner Arch -->
                 <path d="M 31 774 L 31 180 A 169 169 0 0 1 369 180 L 369 774" fill="none" stroke="rgba(210, 255, 114, 0.55)" stroke-width="1.2" />
                 
-                <!-- Top Four-pointed Star -->
-                <g transform="translate(200, 5)">
+                <!-- Top Four-pointed Star (moved down to prevent clipping) -->
+                <g transform="translate(200, 24)">
                     <path d="M 0,-15 L 4,-4 L 15,0 L 4,4 L 0,15 L -4,4 L -15,0 L -4,-4 Z" fill="#FDFCC9" filter="drop-shadow(0 0 5px rgba(210, 255, 114, 0.8))" />
                 </g>
                 <!-- Bottom Four-pointed Star -->
@@ -33,28 +33,71 @@
                     <path d="M 0,-15 L 4,-4 L 15,0 L 4,4 L 0,15 L -4,4 L -15,0 L -4,-4 Z" fill="#FDFCC9" filter="drop-shadow(0 0 5px rgba(210, 255, 114, 0.8))" />
                 </g>
 
-                <!-- Vines / Leaves Left Side -->
-                <path d="M 25 280 Q 15 260 10 240 M 25 450 Q 10 430 15 410 M 25 650 Q 10 670 15 690" fill="none" stroke="rgba(210, 255, 114, 0.5)" stroke-width="1.5" />
-                <!-- Leaf decorations left -->
-                <path d="M 10 240 C 5 230 13 220 17 230 C 20 240 13 245 10 240 Z" fill="#BCE178" />
-                <path d="M 15 410 C 10 400 20 390 23 400 C 25 410 18 415 15 410 Z" fill="#BCE178" />
-                <path d="M 15 690 C 10 700 20 710 23 700 C 25 690 18 685 15 690 Z" fill="#BCE178" />
+                <!-- Twinkling Geometric Stars around the perimeter -->
+                <g class="twinkle-star" transform="translate(80, 160)">
+                    <path d="M 0,-7 L 2,-2 L 7,0 L 2,2 L 0,7 L -2,2 L -7,0 L -2,-2 Z" fill="#FDFCC9" filter="drop-shadow(0 0 3px rgba(210, 255, 114, 0.6))" />
+                </g>
+                <g class="twinkle-star" transform="translate(320, 160)">
+                    <path d="M 0,-7 L 2,-2 L 7,0 L 2,2 L 0,7 L -2,2 L -7,0 L -2,-2 Z" fill="#FDFCC9" filter="drop-shadow(0 0 3px rgba(210, 255, 114, 0.6))" />
+                </g>
+                <g class="twinkle-star" transform="translate(60, 380)">
+                    <path d="M 0,-6 L 1.5,-1.5 L 6,0 L 1.5,1.5 L 0,6 L -1.5,1.5 L -6,0 L -1.5,-1.5 Z" fill="#FDFCC9" filter="drop-shadow(0 0 3px rgba(210, 255, 114, 0.6))" />
+                </g>
+                <g class="twinkle-star" transform="translate(340, 420)">
+                    <path d="M 0,-6 L 1.5,-1.5 L 6,0 L 1.5,1.5 L 0,6 L -1.5,1.5 L -6,0 L -1.5,-1.5 Z" fill="#FDFCC9" filter="drop-shadow(0 0 3px rgba(210, 255, 114, 0.6))" />
+                </g>
+                <g class="twinkle-star" transform="translate(90, 680)">
+                    <path d="M 0,-7 L 2,-2 L 7,0 L 2,2 L 0,7 L -2,2 L -7,0 L -2,-2 Z" fill="#FDFCC9" filter="drop-shadow(0 0 3px rgba(210, 255, 114, 0.6))" />
+                </g>
+                <g class="twinkle-star" transform="translate(310, 660)">
+                    <path d="M 0,-7 L 2,-2 L 7,0 L 2,2 L 0,7 L -2,2 L -7,0 L -2,-2 Z" fill="#FDFCC9" filter="drop-shadow(0 0 3px rgba(210, 255, 114, 0.6))" />
+                </g>
 
-                <!-- Vines / Leaves Right Side -->
-                <path d="M 375 280 Q 385 260 390 240 M 375 450 Q 390 430 385 410 M 375 650 Q 390 670 385 690" fill="none" stroke="rgba(210, 255, 114, 0.5)" stroke-width="1.5" />
-                <!-- Leaf decorations right -->
-                <path d="M 390 240 C 395 230 387 220 383 230 C 380 240 387 245 390 240 Z" fill="#BCE178" />
-                <path d="M 385 410 C 390 400 380 390 377 400 C 375 410 382 415 385 410 Z" fill="#BCE178" />
-                <path d="M 385 690 C 390 700 380 710 377 700 C 375 690 382 685 385 690 Z" fill="#BCE178" />
+                <!-- Baroque Classical Scroll Vines (Left Side) -->
+                <!-- Vines line paths (using looping swirls) -->
+                <path d="M 38 180 C 15 170 5 130 30 110 C 50 90 25 70 15 90 C 5 110 15 130 25 125 M 25 320 C -5 320 -15 280 10 260 C 30 240 10 220 5 240 M 25 480 C -5 480 -15 520 10 540 C 30 560 10 580 5 560 M 25 660 C 5 660 -10 690 10 710 C 30 730 40 700 25 680 C 15 660 30 650 35 665" fill="none" stroke="rgba(210, 255, 114, 0.55)" stroke-width="1.6" />
+                <!-- Leaf clusters left -->
+                <!-- Top Group -->
+                <path d="M 30 110 C 20 110 15 100 20 95 C 25 90 30 100 30 110 M 30 110 C 30 100 25 90 35 85 C 45 90 40 100 30 110 M 30 110 C 40 110 45 100 40 95 C 35 90 30 100 30 110 Z" fill="#BCE178" />
+                <path d="M 15 90 C 5 90 0 80 5 75 C 10 70 15 80 15 90 M 15 90 C 15 80 10 70 20 65 C 30 70 25 80 15 90 M 15 90 C 25 90 30 80 25 75 C 20 70 15 80 15 90 Z" fill="#BCE178" />
+                <!-- Middle Top Group -->
+                <path d="M 10 260 C 0 260 -5 250 0 245 C 5 240 10 250 10 260 M 10 260 C 10 250 5 240 15 235 C 25 240 20 250 10 260 M 10 260 C 20 260 25 250 20 245 C 15 240 10 250 10 260 Z" fill="#BCE178" />
+                <!-- Middle Bottom Group -->
+                <path d="M 10 540 C 0 540 -5 530 0 525 C 5 520 10 530 10 540 M 10 540 C 10 530 5 520 15 515 C 25 520 20 530 10 540 M 10 540 C 20 540 25 530 20 525 C 15 520 10 530 10 540 Z" fill="#BCE178" />
+                <!-- Bottom Group -->
+                <path d="M 10 710 C 0 710 -5 700 0 695 C 5 690 10 700 10 710 M 10 710 C 10 700 5 690 15 685 C 25 690 20 700 10 710 M 10 710 C 20 710 25 700 20 695 C 15 690 10 700 10 710 Z" fill="#BCE178" />
+                <path d="M 25 680 C 15 680 10 670 15 665 C 20 660 25 670 25 680 M 25 680 C 25 670 20 660 30 655 C 40 660 35 670 25 680 M 25 680 C 35 680 40 670 35 665 C 30 660 25 670 25 680 Z" fill="#BCE178" />
+
+                <!-- Baroque Classical Scroll Vines (Right Side) -->
+                <!-- Vines line paths (using looping swirls) -->
+                <path d="M 362 180 C 385 170 395 130 370 110 C 350 90 375 70 385 90 C 395 110 385 130 375 125 M 375 320 C 405 320 415 280 390 260 C 370 240 390 220 395 240 M 375 480 C 405 480 415 520 390 540 C 370 560 390 580 395 560 M 375 660 C 395 660 410 690 390 710 C 370 730 360 700 375 680 C 385 660 370 650 365 665" fill="none" stroke="rgba(210, 255, 114, 0.55)" stroke-width="1.6" />
+                <!-- Leaf clusters right -->
+                <!-- Top Group -->
+                <path d="M 370 110 C 360 110 355 100 360 95 C 365 90 370 100 370 110 M 370 110 C 370 100 365 90 375 85 C 385 90 380 100 370 110 M 370 110 C 380 110 385 100 380 95 C 375 90 370 100 370 110 Z" fill="#BCE178" />
+                <path d="M 385 90 C 375 90 370 80 375 75 C 380 70 385 80 385 90 M 385 90 C 385 80 380 70 390 65 C 400 70 395 80 385 90 M 385 90 C 395 90 400 80 395 75 C 390 70 385 80 385 90 Z" fill="#BCE178" />
+                <!-- Middle Top Group -->
+                <path d="M 390 260 C 380 260 375 250 380 245 C 385 240 390 250 390 260 M 390 260 C 390 250 385 240 395 235 C 405 240 400 250 390 260 M 390 260 C 400 260 405 250 400 245 C 395 240 390 250 390 260 Z" fill="#BCE178" />
+                <!-- Middle Bottom Group -->
+                <path d="M 390 540 C 380 540 375 530 380 525 C 385 520 390 530 390 540 M 390 540 C 390 530 385 520 395 515 C 405 520 400 530 390 540 M 390 540 C 400 540 405 530 400 525 C 395 520 390 530 390 540 Z" fill="#BCE178" />
+                <!-- Bottom Group -->
+                <path d="M 390 710 C 380 710 375 700 380 695 C 385 690 390 700 390 710 M 390 710 C 390 700 385 690 395 685 C 405 690 400 700 390 710 M 390 710 C 400 710 405 700 400 695 C 395 690 390 700 390 710 Z" fill="#BCE178" />
+                <path d="M 375 680 C 365 680 360 670 365 665 C 370 660 375 670 375 680 M 375 680 C 375 670 370 660 380 655 C 390 660 385 670 375 680 M 375 680 C 385 680 390 670 385 665 C 380 660 375 670 375 680 Z" fill="#BCE178" />
             </svg>
         </div>
+
+        <!-- Global Header Logo -->
+        <header class="logo global-logo">
+            <div class="oright-logo-wrapper">
+                <span class="oright-logo-dot"></span>
+                <span class="oright-logo-text">'right</span>
+                <span class="oright-logo-divider">|</span>
+                <span class="oright-logo-mirror">O'Mirror</span>
+            </div>
+        </header>
 
     <!-- 1. Landing Page -->
     <section id="landing" class="screen active">
         <div class="top-arch-spacer"></div>
-        <header class="logo">
-            <h2>O'right | O'Mirror</h2>
-        </header>
         <div class="content-wrapper">
             <h3 class="subtitle">O'Mirror 綠色永續 專屬髮肌測驗</h3>
             <h1 class="title">你的頭皮住著哪種<br>毛囊寶寶？</h1>
@@ -149,9 +192,6 @@
 
     <!-- 5. Result Page & 6. Share Page -->
     <section id="result" class="screen scrollable">
-        <header class="logo">
-            <h2>O'right | O'Mirror</h2>
-        </header>
         <div class="result-container">
             <!-- Avatar Area -->
             <div class="result-avatar-area">

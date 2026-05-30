@@ -145,20 +145,54 @@ body {
     pointer-events: none;
 }
 
-.logo {
-    padding: 0.5rem 1.5rem 0.2rem;
-    text-align: center;
+.logo.global-logo {
+    position: absolute;
+    top: 52px; /* centered below the top star */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 100;
+    pointer-events: none;
 }
 
-#result .logo {
-    padding-top: 4rem;
+.oright-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
 }
 
-.logo h2 {
-    font-family: var(--font-heading);
+.oright-logo-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #8CC63F; /* Official O'right green */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(140, 198, 63, 0.5);
+}
+
+.oright-logo-text {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.oright-logo-divider {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.25);
+    margin: 0 4px;
+    line-height: 1;
+}
+
+.oright-logo-mirror {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--primary-green);
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(210, 255, 114, 0.3);
+    line-height: 1;
 }
 
 /* --- Typography --- */
@@ -173,10 +207,10 @@ h1.title {
 }
 
 h3.subtitle {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--primary-green);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     letter-spacing: 1px;
     text-shadow: 0 0 8px rgba(210, 255, 114, 0.4);
 }
@@ -1020,4 +1054,51 @@ h3.subtitle {
     height: 100vh;
     pointer-events: none;
     z-index: 999;
+}
+
+/* Twinkle Stars dynamic graphics */
+.twinkle-star {
+    animation: starTwinkle 3s infinite ease-in-out;
+    transform-origin: center;
+}
+
+.twinkle-star:nth-child(2n) {
+    animation-delay: 0.6s;
+    animation-duration: 2.5s;
+}
+
+.twinkle-star:nth-child(3n) {
+    animation-delay: 1.2s;
+    animation-duration: 3.5s;
+}
+
+.twinkle-star:nth-child(4n) {
+    animation-delay: 1.8s;
+    animation-duration: 2.8s;
+}
+
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+    50% {
+        opacity: 0.95;
+        transform: scale(1.1);
+    }
+}
+
+/* Breathing animation for the green borders and side ornaments */
+.arch-frame > path,
+.arch-frame > g:not(.twinkle-star) {
+    animation: borderPulse 4s infinite ease-in-out alternate;
+}
+
+@keyframes borderPulse {
+    0% {
+        opacity: 0.55;
+    }
+    100% {
+        opacity: 1;
+    }
 }

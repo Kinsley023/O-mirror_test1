@@ -153,6 +153,21 @@ body {
     width: auto;
     z-index: 100;
     pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide global logo on the result screen to prevent overlapping the avatar and photo */
+#app-container:has(#result.active) .global-logo {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.result-bottom-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .oright-logo-wrapper {
